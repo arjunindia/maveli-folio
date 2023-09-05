@@ -8,8 +8,76 @@ import Section from "../components/Section.astro";
 <Layout title="I'm Maveli.">
   <main>
     <Hero />
-    <Section />
-  </main>
-</Layout>
+    <Section class="about" id="about">
+      <h2>എന്നെക്കുറിച്ച്</h2>
+      <div class="flex">
+        <p>
+          I was a king of <span>Kerala</span>, our land. The land of coconut
+          trees, backwaters and seas. I am King <span>Mahabali</span>, a revered
+          figure in the rich tapestry of Kerala's history and culture. My legacy
+          is intertwined with the grand festival of <span>Onam</span>,
+          celebrated with great enthusiasm and devotion throughout the region.
+          Onam, the festival that commemorates my reign, is a time when
+          Keralites come together to celebrate the bountiful harvest and the <span
+            >spirit of unity and prosperity</span
+          >. As the legendary king, my story serves as a symbol of Kerala's
+          vibrant cultural heritage and the timeless values of <span
+            >love, generosity, and humility</span
+          >. Onam showcases the grandeur of our traditions through mesmerizing
+          floral carpets, sumptuous feasts, traditional dances like the
+          Kathakali, and exhilarating boat races. My presence in this
+          celebration reminds everyone of the enduring spirit of Kerala, where <span
+            >people of all backgrounds come together in harmony</span
+          >, just as they did during my golden rule. Join me in celebrating the
+          essence of Onam, a festival that encapsulates the very soul of Kerala.
+        </p>
+        <img src="/onam.png" alt="Onam" />
+      </div>
+    </Section>
 
-<style></style>
+    <Section class="experience">
+      <h2>Experience</h2>
+      <div class="flex">
+        <!-- <Card /> -->
+      </div>
+    </Section>
+  </main>
+
+  <style>
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .flex p {
+      flex: 1;
+    }
+    .flex img {
+      flex: 1;
+      margin-left: 2rem;
+      max-width: 600px;
+    }
+  </style>
+
+  <style is:global>
+    .about h2,
+    .experience h2 {
+      font-size: 4rem;
+      color: #eee;
+    }
+    .about p {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      max-width: 65ch;
+      color: #eee;
+    }
+    .about p span {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      max-width: 65ch;
+      color: #eee;
+      font-weight: bold;
+      color: #f9a825;
+    }
+  </style>
+</Layout>

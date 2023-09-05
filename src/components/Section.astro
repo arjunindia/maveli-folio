@@ -1,20 +1,25 @@
 ---
 interface Props {
   class?: string;
+  id?: string;
 }
-const { class: className } = Astro.props;
+const { class: className, id: idName } = Astro.props;
 ---
 
-<section class={className}><slot /></section>
+<section class={className} id={idName}><slot /></section>
 <style>
   section {
     margin: 1rem;
-    padding: 1rem;
+    padding: 1rem 4rem;
     background: linear-gradient(180deg, #333333aa 0%, #272727aa 100%) no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
     min-height: calc(100vh - 4rem);
     border-radius: 0.5rem;
+  }
+  section h2 {
+    font-size: 4rem;
+    color: #eee;
   }
 </style>

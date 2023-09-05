@@ -48,4 +48,46 @@ const { title } = Astro.props;
       Courier New,
       monospace;
   }
+  .yellow-orange {
+    background-repeat: no-repeat;
+    background-position: left 0% bottom 10%;
+    background-image: linear-gradient(
+      90deg,
+      #dae601 0%,
+      #dae601 7%,
+      #e2cb07 7%,
+      #e2cb07 14%,
+      #eab00d 14%,
+      #eab00d 21%,
+      #f29412 21%,
+      #f29412 28%,
+      #fa7918 28%,
+      #fa7918 100%
+    );
+    background-size: 1% 18%;
+    transition: background-size 0.5s ease-in-out;
+  }
+  .yellow-orange-visible {
+    background-size: 100% 15%;
+    transition: background-size 0.5s ease-in-out;
+  }
 </style>
+<script>
+  if (typeof window !== "undefined") {
+    // use IntersectionObserver to add a class to that when the yellow orange text is visible
+    const text = document.querySelectorAll(".yellow-orange");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("yellow-orange-visible");
+          } else {
+            entry.target.classList.remove("yellow-orange-visible");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    text.forEach((t) => observer.observe(t));
+  }
+</script>

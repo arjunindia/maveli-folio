@@ -7,22 +7,23 @@ const { class: className } = Astro.props;
 
 <section class={className} id="hero">
   <h1>ഞാൻ Maveli.</h1>
+  <img src="/maveli.png" alt="Maveli" />
 </section>
 <style>
   section {
     margin: 0 1rem;
     padding: 5rem;
-    background: linear-gradient(180deg, #f6d465c2 0%, #fda085aa 100%) no-repeat;
-
-    background-size: 100% 100%;
+    background: linear-gradient(20deg, #ffd54cda 0%, #ff754eaa 100%) no-repeat;
+    background-size: 200% 500%;
     background-position: 100% 100%;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-    min-height: calc(100vh - 16rem);
+    min-height: calc(100vh - 17rem);
     border-radius: 0.5rem;
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
     animation: gradient 5s ease infinite;
+    position: relative;
   }
   h1 {
     font-size: 8rem;
@@ -32,21 +33,33 @@ const { class: className } = Astro.props;
     line-height: 1.2;
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, #1f1f1f, #000000);
+    background: linear-gradient(50deg, #111111, #2e2e2e);
     background-size: 100% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  img {
+    position: absolute;
+    width: 100%;
+    max-width: 40vw;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 1rem;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
   @keyframes gradient {
     0% {
-      background-position: 0% 0%;
+      background-position-y: 100%;
     }
     50% {
-      background-position: 100% 50%;
+      background-position-y: 0%;
     }
     100% {
-      background-position: 0% 0%;
+      background-position-y: 100%;
     }
   }
 </style>

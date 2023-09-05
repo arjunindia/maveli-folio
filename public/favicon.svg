@@ -15,15 +15,12 @@
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="Malayalam letter Ma.svg">
       <style>
-  path,g {
-    fill: #273240;
-  }
+
   svg {
    transform: scaley(1.3);
   }
-  @media (prefers-color-scheme: dark) {
     path,g { fill: #ffffff; }
-  }
+  
 </style>
   <defs
      id="defs3849">

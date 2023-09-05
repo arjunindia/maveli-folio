@@ -1,0 +1,82 @@
+<nav>
+  <div class="logo">
+    <a href="index.php">
+      <img src="favicon.svg" alt="Maveli Logo" width="50px" height="50px" />
+       Maveli</a
+    >
+  </div>
+  <div class="wrapper">
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="index.php?page=about">About</a></li>
+      <li><a href="index.php?page=contact">Contact</a></li>
+      <li><a href="index.php?page=login">Login</a></li>
+      <li><a href="index.php?page=register">Register</a></li>
+      <li><a href="index.php?page=logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+  }
+  nav .logo {
+    padding: 0.5rem 0;
+  }
+  nav .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #eee;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  nav .logo a img {
+    margin-right: 0.5rem;
+    background-color: #1e1e1e;
+  }
+  .wrapper {
+    max-width: 960px;
+    background-color: #bebebe;
+    margin-left: auto;
+    border-radius: 5px;
+    flex: 1;
+  }
+  nav ul {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+  }
+  nav ul li a {
+    display: block;
+    padding: 0.3rem;
+    color: #2e2e2e;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+  }
+
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f9fd19;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+</style>

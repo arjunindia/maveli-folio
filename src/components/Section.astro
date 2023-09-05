@@ -1,0 +1,21 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<section class={className}><slot /></section>
+<style>
+  section {
+    margin: 0 1rem;
+    padding: 1rem;
+    background: linear-gradient(180deg, #f6d465aa 0%, #fda085aa 100%) no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 2rem);
+    border-top: 1px solid #111;
+    border-style: dashed;
+  }
+</style>

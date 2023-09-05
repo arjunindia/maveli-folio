@@ -22,6 +22,7 @@ const { title, date, body } = Astro.props;
     background-color: #ffffff00;
     transition: all 0.2s ease-in-out;
     transform: translateX(-0.5rem);
+    width: fit-content;
   }
   div:hover {
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.726);
@@ -32,6 +33,9 @@ const { title, date, body } = Astro.props;
 
   h3 {
     margin-bottom: 0.5rem;
+    word-break: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   time {
@@ -46,5 +50,19 @@ const { title, date, body } = Astro.props;
     margin-top: 0.5rem;
     line-height: 1.5;
     max-width: 50rem;
+  }
+  @media (max-width: 768px) {
+    p {
+      max-width: 80vw;
+      width: 100%;
+    }
+    div {
+      transform: translateX(-1.5rem);
+      overflow: hidden;
+    }
+    div:hover {
+      box-shadow: none;
+      transform: translateX(-1rem);
+    }
   }
 </style>

@@ -8,8 +8,7 @@ import Section from "../components/Section.astro";
 <Layout title="I'm Maveli.">
   <main>
     <Hero />
-    <Section class="about" id="about">
-      <h2>എന്നെക്കുറിച്ച്</h2>
+    <Section class="about" id="about" title="എന്നെക്കുറിച്ച്">
       <div class="flex">
         <p>
           I was a king of <span>Kerala</span>, our land. The land of coconut
@@ -35,10 +34,25 @@ import Section from "../components/Section.astro";
       </div>
     </Section>
 
-    <Section class="experience">
-      <h2>Experience</h2>
-      <div class="flex">
-        <!-- <Card /> -->
+    <Section class="experience" title="Experience">
+      <div class="cards">
+        <Card
+          title="Reign as King of Kerala"
+          body="As the benevolent ruler of the beautiful land of Kerala, I presided over a period of unprecedented prosperity and harmony. My reign was marked by a commitment to justice, equity, and the well-being of my subjects. I fostered an environment where people from all walks of life thrived together, making Kerala a land of plenty and diversity."
+          date="Ancient times"
+        /><Card
+          title="Founding the Festival of Onam"
+          body="One of my most enduring contributions to Kerala's culture is the establishment of the grand festival of Onam. This annual celebration, held in the Malayalam month of Chingam, continues to unite the people of Kerala and showcases the rich traditions, art forms, and culinary delights of our land."
+          date="Time immemorial"
+        /><Card
+          title="Promotion of Art and Culture"
+          body="During my rule, I was a patron of the arts, promoting and nurturing cultural expressions like Kathakali, Mohiniyattam, and traditional music. These art forms continue to thrive in Kerala, enriching the cultural landscape of the region."
+          date="Throughout my reign"
+        /><Card
+          title="Legacy of Generosity"
+          body="I am remembered not only for my just rule but also for my unwavering commitment to generosity and charity. My spirit of giving during the festival of Onam, symbolized by the mythical visit of Vamana, the dwarf Brahmin, continues to inspire acts of kindness and compassion in Kerala."
+          date="Eternally remembered"
+        />
       </div>
     </Section>
   </main>
@@ -46,7 +60,7 @@ import Section from "../components/Section.astro";
   <style>
     .flex {
       display: flex;
-      align-items: center;
+      align-items: start;
       justify-content: space-between;
     }
     .flex p {
@@ -57,14 +71,14 @@ import Section from "../components/Section.astro";
       margin-left: 2rem;
       max-width: 600px;
     }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(65ch, 1fr));
+      gap: 2rem;
+    }
   </style>
 
   <style is:global>
-    .about h2,
-    .experience h2 {
-      font-size: 4rem;
-      color: #eee;
-    }
     .about p {
       font-size: 1.5rem;
       line-height: 1.7;

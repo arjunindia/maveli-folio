@@ -56,6 +56,61 @@ import Cta from "../components/Cta.astro";
         />
       </div>
     </Section>
+    <Section class="legacy" id="legacy" title="Legacy and Influence">
+      <p>
+        As King Mahabali, I take great pride in the enduring legacy that I've
+        left upon the land of Kerala. My reign was marked by values that have
+        stood the test of time, continuing to shape the culture and spirit of
+        this vibrant region.
+      </p>
+      <ol>
+        <li>
+          <strong>Cultural Renaissance:</strong> In my time, I wholeheartedly
+          supported the flourishing of the arts. The beautiful art forms of
+          Kathakali and Mohiniyattam, with their vivid expressions and vibrant
+          costumes, were cherished and promoted. Today, these art forms continue
+          to mesmerize audiences and are integral to Kerala's cultural identity.
+        </li>
+        <li>
+          <strong>Festive Traditions:</strong> The grand festival of Onam, which
+          I initiated, remains a magnificent celebration in Kerala. The
+          traditions of crafting intricate Pookalams (floral carpets), relishing
+          the elaborate Onasadya (feast), and competing in thrilling Vallam Kali
+          (boat races) have been lovingly passed down through generations,
+          keeping my spirit alive.
+        </li><li>
+          <strong>Moral Values:</strong> My story, especially the act of
+          sacrificing my kingdom for my people's welfare, teaches a timeless
+          lesson. It underscores the importance of humility, selflessness, and
+          the belief that true greatness lies in serving one's subjects. These
+          principles continue to inspire virtuous lives in Kerala.
+        </li><li>
+          <strong>Social Harmony:</strong> During my reign, Kerala was a
+          harmonious land, where people from all walks of life lived together
+          without discrimination. This legacy of social inclusivity and
+          acceptance endures, as Kerala's diverse communities coexist peacefully
+          and respectfully.
+        </li><li>
+          <strong>Economic Prosperity:</strong> I dedicated myself to ensuring
+          the equitable distribution of resources and wealth, which led to
+          economic prosperity in Kerala. This commitment continues to influence
+          Kerala's economic policies, prioritizing social welfare and inclusive
+          growth. in Kerala.
+        </li>
+        <li>
+          <strong>Tourism and Heritage:</strong> My legacy has made Kerala a
+          sought-after destination for travelers worldwide. Tourists flock here
+          to experience our rich cultural heritage, lush landscapes, and vibrant
+          festivals, with Onam standing out as a major attraction.
+        </li>
+      </ol>
+      <p>
+        My legacy serves as a reminder of Kerala's unique cultural identity and
+        the enduring values that bind its people together. It is a legacy of
+        love, generosity, and humility that continues to inspire and unite the
+        diverse communities of this enchanting land.
+      </p>
+    </Section>
     <Cta />
   </main>
 
@@ -105,11 +160,33 @@ import Cta from "../components/Cta.astro";
       font-weight: bold;
       color: #f9a825;
     }
+    .legacy p {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      max-width: 65ch;
+      color: #ccc;
+    }
+    .legacy ol {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      max-width: 75ch;
+      color: #eee;
+      margin-left: 2rem;
+    }
+    .legacy ol li {
+      margin-bottom: 2rem;
+    }
     @media (max-width: 768px) {
       .about p {
         font-size: 1.1rem;
       }
       .about p span {
+        font-size: 1.1rem;
+      }
+      .legacy p {
+        font-size: 1.1rem;
+      }
+      .legacy ol {
         font-size: 1.1rem;
       }
     }

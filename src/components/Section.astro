@@ -23,4 +23,14 @@ const { class: className, id: idName, title } = Astro.props;
     font-size: 4rem;
     color: #eee;
   }
+  @media (max-width: 768px) {
+    section {
+      margin: 0.5rem;
+      padding: 0.5rem 2rem;
+      min-height: calc(100vh - 1rem);
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
 </style>

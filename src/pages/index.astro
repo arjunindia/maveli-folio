@@ -78,6 +78,16 @@ import Cta from "../components/Cta.astro";
       grid-template-columns: repeat(auto-fit, minmax(65ch, 1fr));
       gap: 2rem;
     }
+    @media (max-width: 1200px) {
+      .flex {
+        flex-direction: column;
+      }
+      .flex img {
+        margin-left: 0;
+        margin-top: 2rem;
+        max-width: 100%;
+      }
+    }
   </style>
 
   <style is:global>
@@ -94,6 +104,14 @@ import Cta from "../components/Cta.astro";
       color: #eee;
       font-weight: bold;
       color: #f9a825;
+    }
+    @media (max-width: 768px) {
+      .about p {
+        font-size: 1.1rem;
+      }
+      .about p span {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </Layout>

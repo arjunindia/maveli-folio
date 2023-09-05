@@ -25,6 +25,7 @@ const { class: className } = Astro.props;
     animation: gradient 5s ease infinite;
     position: relative;
     overflow: hidden;
+    z-index: 0;
   }
   h1 {
     font-size: 8rem;
@@ -54,7 +55,26 @@ const { class: className } = Astro.props;
     filter: hue-rotate(20deg) saturate(0.5) brightness(1.2)
       drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
     animation: rotate 420s ease infinite;
+    z-index: -1;
   }
+
+  @media (max-width: 768px) {
+    section {
+      padding: 2rem;
+      min-height: calc(80vh - 4rem);
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    img {
+      max-width: 500px;
+      right: 0;
+      bottom: 30%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
   @keyframes gradient {
     0% {
       background-position-y: 100%;

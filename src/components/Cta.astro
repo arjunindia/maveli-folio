@@ -1,0 +1,89 @@
+<section>
+  <p>
+    Subscribe to my newsletter to be updated whenever I visit our land next
+    time! 💌
+  </p>
+  <div class="input">
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Your email address"
+      class="w-full mt-4 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent"
+    />
+    <button
+      type="submit"
+      class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
+    >
+      Subscribe
+    </button>
+  </div>
+</section>
+
+<style>
+  section {
+    margin: 1rem 1rem;
+    padding: 4rem;
+    background: #ffb75e;
+    background: linear-gradient(to right, #ed8f03, #ffb75e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    gap: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  input {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    max-width: 600px;
+    width: 100%;
+    flex: 1;
+  }
+  input:focus {
+    outline: none;
+    border-color: #03abed;
+    box-shadow: 0 0 0 3px rgba(237, 143, 3, 0.3);
+  }
+  button {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    background: #2b2b2b;
+    border: 1px solid #2e2e2e;
+    color: #fff;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    section {
+      padding: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    input {
+      font-size: 1rem;
+    }
+    button {
+      font-size: 1rem;
+    }
+  }
+</style>

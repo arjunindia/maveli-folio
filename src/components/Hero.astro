@@ -7,7 +7,7 @@ const { class: className } = Astro.props;
 
 <section class={className} id="hero">
   <h1>ഞാൻ Maveli.</h1>
-  <img src="/maveli.png" alt="Maveli" />
+  <img src="/pookalam.png" alt="Maveli" />
 </section>
 <style>
   section {
@@ -24,6 +24,7 @@ const { class: className } = Astro.props;
     /* justify-content: center; */
     animation: gradient 5s ease infinite;
     position: relative;
+    overflow: hidden;
   }
   h1 {
     font-size: 8rem;
@@ -42,14 +43,17 @@ const { class: className } = Astro.props;
   img {
     position: absolute;
     width: 100%;
-    max-width: 40vw;
+    max-width: 60vw;
     margin-left: auto;
     margin-right: 0;
     margin-top: auto;
     margin-bottom: auto;
-    right: 1rem;
+    right: -20%;
     bottom: 50%;
     transform: translateY(50%);
+    filter: hue-rotate(20deg) saturate(0.5) brightness(1.2)
+      drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+    animation: rotate 500s ease infinite;
   }
   @keyframes gradient {
     0% {
@@ -60,6 +64,17 @@ const { class: className } = Astro.props;
     }
     100% {
       background-position-y: 100%;
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: translateY(50%) rotate(0deg);
+    }
+    50% {
+      transform: translateY(50%) rotate(360deg);
+    }
+    100% {
+      transform: translateY(50%) rotate(0deg);
     }
   }
 </style>

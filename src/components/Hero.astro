@@ -7,7 +7,7 @@ const { class: className } = Astro.props;
 
 <section class={className} id="hero">
   <h1>ഞാൻ Maveli.</h1>
-  <img src="/pookalam.png" alt="Maveli" />
+  <img src={Astro.url + "/pookalam.png"} alt="Maveli" />
 </section>
 <style>
   section {
